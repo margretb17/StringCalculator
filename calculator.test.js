@@ -17,3 +17,7 @@ it("should sumarize multible numbers", () => {
   expect(add("1,2,3,4")).toBe(10);
 });
 
+it("should allow new lines between numbers", () => {
+  expect(add("1\n2")).toBe(3);
+});
+

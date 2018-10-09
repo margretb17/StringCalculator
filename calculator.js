@@ -8,6 +8,16 @@ function add(numbers)
     var numberArray = numbers.split(",")
     return sum(numberArray);
   }
+  else if(numbers.includes("\n"))
+  {
+    var numberArray = numbers.split("\n");
+    return sum(numberArray);
+  }
+  else if(numbers.includes("\n") || numbers.includes(","))
+  {
+    var numberArray = numbers.split("\n") || numbers.split(",");
+    return sum(numberArray);
+  }
   else
     return parseInt(numbers);
 }
