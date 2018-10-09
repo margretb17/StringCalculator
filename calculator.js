@@ -9,20 +9,8 @@ function add(numbers)
   if(numbers.includes(",") || numbers.includes("\n"))
   {
     var numberArray = numbers.split(/[,\n]/);
-    var negNumbers = [];
-    for(var i = 0; i < numberArray.length; i++)
-    {
-      if(parseInt(numberArray[i]) < 0)
-      {
-        negNumbers.push(numberArray[i]);
-      }
-    }
-    if(negNumbers.length > 0)
-    {
-      //console.log(negNumbers);
-      throw new Error("Negatives not allowed:" + negNumbers);
-    }
-  return sum(numberArray);
+    negativeNumbers(numberArray);
+    return sum(numberArray);
 }
   else
   {
@@ -38,5 +26,22 @@ function sum(numberArray)
       total += parseInt(numberArray[i]);
     }
     return total;
+}
+
+function negativeNumbers(numberArray)
+{
+  var negNumbers = [];
+    for(var i = 0; i < numberArray.length; i++)
+    {
+      if(parseInt(numberArray[i]) < 0)
+      {
+        negNumbers.push(numberArray[i]);
+      }
+    }
+    if(negNumbers.length > 0)
+    {
+      //console.log(negNumbers);
+      throw new Error("Negatives not allowed:" + negNumbers);
+    }
 }
 module.exports = add;
