@@ -1,0 +1,23 @@
+{
+  "name": "stringcalculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator.js",
+  "dependencies": {
+    "jest": "^23.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/margretb17/StringCalculator.git"
+  },
+  "author": "margretvala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/margretb17/StringCalculator/issues"
+  },
+  "homepage": "https://github.com/margretb17/StringCalculator#readme"
+}
