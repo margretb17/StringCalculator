@@ -40,4 +40,5 @@ it("should allow a different delimeter", () => {
   expect(add("//;\n1;2")).toBe(3);
   expect(add("//;\n3; 5")).toBe(8);
   expect(add("//hugb\n1hugb2")).toBe(3);
+  expect(add("//hugb\n1hugb2hugb5")).toBe(8);
 });
