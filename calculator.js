@@ -8,6 +8,14 @@ function add(numbers)
   if(numbers.includes(",") || numbers.includes("\n"))
   {
     var numberArray = numbers.split(/[,\n]/);
+
+    if(numberArray[0].includes("//"))
+    {
+      //console.log("test: " +  numberArray); 
+      var delimeter = numberArray[0].substring(2);
+      var re = new RegExp("(?: |" + delimeter + "|\\n)+");
+      numberArray = numberArray[1].split(re);
+    } 
     negativeNumbers(numberArray);
     return sum(numberArray);
   }

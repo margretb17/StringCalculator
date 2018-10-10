@@ -31,7 +31,13 @@ it("should throw an exception when calling negative numbers", () => {
   }).toThrow("Negatives not allowed:-4,-5");
 });
 
-it("should ignore numbers that are bigger than 1000 ", () => {
-  expect(add("1001,2")).toBe(2);
+it("should ignore numbers that are bigger than 1000", () => {
+  expect(add("1001, 2")).toBe(2);
   expect(add("1005,5,5")).toBe(10);
+});
+
+it("should allow a different delimeter", () => {
+  expect(add("//;\n1;2")).toBe(3);
+  expect(add("//;\n3; 5")).toBe(8);
+  expect(add("//hugb\n1hugb2")).toBe(3);
 });
